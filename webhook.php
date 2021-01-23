@@ -28,7 +28,8 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-			//$message['text']の中に送られてきたメッセージが入っている
+			/* $message['text']の中に送られてきたメッセージが入っている
+			   if文を使用しどの動物名を同じコメントなのかを判別 */
 			if ($message['text'] === '猫') {
                     		$client->replyMessage([
                         		'replyToken' => $event['replyToken'],
