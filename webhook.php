@@ -28,6 +28,7 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
+			//$message['text']の中に送られてきたメッセージが入っている
 			if ($message['text'] === '猫') {
                     		$client->replyMessage([
                         		'replyToken' => $event['replyToken'],
@@ -52,7 +53,7 @@ foreach ($client->parseEvents() as $event) {
                     		]);
 			}
 
-			if ($message['text'] === 'ウサギ') {
+			if ($message['text'] === 'うさぎ') {
                     		$client->replyMessage([
                         		'replyToken' => $event['replyToken'],
                         		'messages' => [
